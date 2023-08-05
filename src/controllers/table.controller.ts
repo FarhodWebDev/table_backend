@@ -11,7 +11,7 @@ export const getTables = async (req: Request, res: Response) => {
    { _id: 0 },
    { sort: { id: 1 }, skip: 0, limit: 10 }
   );
-  res.status(200).json(tables);
+  res.status(200).json({ tables, skip: 0, limit: 10 });
  } catch (e: any) {
   res.status(400).send({ message: e.message });
  }

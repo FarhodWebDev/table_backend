@@ -17,7 +17,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const app_1 = __importDefault(require("./app"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const port = process.env.PORT || 8865;
+const port = process.env.PORT || 8864;
 const runServer = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         mongoose_1.default.connect(process.env.mongo_url);

@@ -6,7 +6,11 @@ import { stringify } from "querystring";
 
 export const getTables = async (req: Request, res: Response) => {
  try {
-  const tables = await tableModel.find({});
+  const tables = await tableModel.find(
+   {},
+   { _id: 0 },
+   { sort: { id: 1 }, skip: 0, limit: 10 }
+  );
   res.status(200).json(tables);
  } catch (e: any) {
   res.status(400).send({ message: e.message });

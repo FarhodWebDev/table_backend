@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const port = process.env.PORT || 8865;
+const port = process.env.PORT || 8864;
 
 const runServer = async () => {
  try {
